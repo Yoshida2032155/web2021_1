@@ -2,10 +2,12 @@ const sqlite3 = require('sqlite3').verbose();
 const db = new sqlite3.Database('test2.db');
 
 let schema = `
-create table weapon(
+create table damage(
   id integer primary key,
-  name text not null,
-  rate text not null
+  head numeric not null,
+  body numeric not null,
+  leg numeric not null
+  
 );
 `
 
