@@ -1,0 +1,25 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Show message</title>
+</head>
+<body>
+  <h2>VALORANT武器一覧</h2>
+  <table>
+      <% for( let row of data ) { %>
+        <tr>
+            <td><%= row.id %></td>
+            <td><%= row.name %></td>
+            <td><%= row.rate %></td>
+            <td><%= row.head %></td>
+            <td><%= row.body %></td>
+            <td><%= row.leg %></td>
+        </tr>
+      <% } %>
+  </table>
+  <br>
+  <a href="/public/weapon.html"> 武器名入力</a><br>
+  <a href="/public/damage.html"> 攻撃力入力</a><br>
+</body>
+</html>
