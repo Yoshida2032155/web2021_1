@@ -5,7 +5,11 @@ let schema = `
 create table weapon(
   id integer primary key,
   name text not null,
-  rate text not null
+  rate text not null,
+  head twxt not null,
+  body text not null,
+  leg text not null,
+  tierid text not null
 );
 `
 

@@ -22,6 +22,19 @@ app.get("/", (req, res) => {
     })
 });
 
+app.get("/001", (req, res) => {
+    let sql = 'insert into weapon ("name","rate") values ('+ req.query.pp +','+ req.query.pp2 +');';
+  db.serialize( () => {
+        db.all(sql, (error, data) => {
+            if( error ) {
+                res.render('home', {mes:"エラーです"});
+            }
+            //console.log(data);    // ③
+            res.render('selectVALO', {data:data});
+        })
+    })
+})
+
 app.use(function(req, res, next) {
   res.status(404).send('ページが見つかりません');
 });
