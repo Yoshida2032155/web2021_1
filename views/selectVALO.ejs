@@ -5,21 +5,24 @@
   <title>Show message</title>
 </head>
 <body>
-  <h2>VALORANT武器一覧</h2>
+  <h2>VALORANTエージェント一覧</h2>
   <table>
       <% for( let row of data ) { %>
         <tr>
             <td><%= row.id %></td>
             <td><%= row.name %></td>
-            <td><%= row.rate %></td>
-            <td><%= row.head %></td>
-            <td><%= row.body %></td>
-            <td><%= row.leg %></td>
+            <td><%= row.offense %></td>
+            <td><%= row.defense %></td>
+            <td><%= row.search %></td>
+            <td><%= row.control %></td>
+            <td>
+              <form action="/001"><input type="submit" value="pick">
+              <input type="hidden" name="id" value="id">
+            </td>
         </tr>
       <% } %>
   </table>
   <br>
-  <a href="/public/weapon.html"> 武器名入力</a><br>
-  <a href="/public/damage.html"> 攻撃力入力</a><br>
+  <a href="/public/weapon.html"> </a><br>
 </body>
 </html>

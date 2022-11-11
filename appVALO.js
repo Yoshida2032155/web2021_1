@@ -9,7 +9,7 @@ app.use("/public", express.static(__dirname + "/public"));
 
 app.get("/", (req, res) => {
   const message = " ";
-    let sql = "select weapon.id, name, rate, head, body, leg from weapon inner join damage on weapon.id=damage.id";
+    let sql = "select id, name, offense, defense, search, control from character;";
     //console.log(sql);    // ②
     db.serialize( () => {
         db.all(sql, (error, data) => {
@@ -23,7 +23,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/001", (req, res) => {
-    let sql = 'insert into weapon ("name","rate") values ('+ req.query.pp +','+ req.query.pp2 +');';
+    let sql = 'insert into character ("chracter_id") values ('+ req.query.pp +','+ req.query.pp2 +');';
   db.serialize( () => {
         db.all(sql, (error, data) => {
             if( error ) {

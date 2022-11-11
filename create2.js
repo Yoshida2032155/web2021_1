@@ -2,9 +2,9 @@ const sqlite3 = require('sqlite3').verbose();
 const db = new sqlite3.Database('test2.db');
 
 let schema = `
-create table tier(
+create table party(
   id integer primary key,
-  tier text not null
+  character_id number not null
   
 );
 `

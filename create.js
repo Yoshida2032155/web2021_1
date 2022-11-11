@@ -2,14 +2,13 @@ const sqlite3 = require('sqlite3').verbose();
 const db = new sqlite3.Database('test2.db');
 
 let schema = `
-create table weapon(
+create table character(
   id integer primary key,
   name text not null,
-  rate text not null,
-  head twxt not null,
-  body text not null,
-  leg text not null,
-  tierid text not null
+  offense number not null,
+  defense number not null,
+  search number not null,
+  control number not null
 );
 `
 
