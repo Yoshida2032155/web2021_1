@@ -7,6 +7,7 @@
 <body>
   <h2>VALORANTエージェント一覧</h2>
   <table>
+    <form action="/001">
       <% for( let row of data ) { %>
         <tr>
             <td><%= row.id %></td>
@@ -16,13 +17,13 @@
             <td><%= row.search %></td>
             <td><%= row.control %></td>
             <td>
-              <form action="/001">
-                <input type="submit" value="pick">
-                <input type="hidden" name="id" value="id">
-              </form>
+                <input type="checkbox" name="<%= row.id %>">
+                <label for="pick">pick</label>
             </td>
         </tr>
       <% } %>
+      <input type="submit" value="決定">
+    </form>
   </table>
   <br>
   <a href="/public/weapon.html"> </a><br>

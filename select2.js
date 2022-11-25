@@ -1,9 +1,8 @@
 const sqlite3 = require('sqlite3').verbose();
 const db = new sqlite3.Database('test2.db');
 
-let sql = `
-select id, head, body, leg from damage;
-`
+let sql = "select id, character_id from party";
+
 
 db.serialize( () => {
 	db.all( sql, (error, row) => {
@@ -12,7 +11,7 @@ db.serialize( () => {
 			return;
 		}
 		for( let data of row ) {
-			console.log( data.id + ' : ' + data.head + ' ' + data.body + ' ' + data.leg );
+			console.log( data.id + ' : ' + data.character_id );
 		}
 	});
 });

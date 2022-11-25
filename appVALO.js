@@ -23,7 +23,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/001", (req, res) => {
-    let sql = 'insert into character ("chracter_id") values ('+ req.query.pp +','+ req.query.pp2 +');';
+    let sql = 'insert into character ("chracter_id") values ("'+ req.query.pick +'");';
   db.serialize( () => {
         db.all(sql, (error, data) => {
             if( error ) {
