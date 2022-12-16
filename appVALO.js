@@ -35,6 +35,21 @@ app.get("/001", (req, res) => {
     })
 })
 
+app.get("/002", (req, res) => {
+  const message = " ";
+    let sql = "select id, character_id from party;";
+    //console.log(sql);    // ②
+    db.serialize( () => {
+        db.all(sql, (error, data) => {
+            if( error ) {
+                res.render('home', {mes:"エラーです"});
+            }
+            //console.log(data);    // ③
+            res.render('pick', {data:data});
+        })
+    })
+});
+
 app.use(function(req, res, next) {
   res.status(404).send('ページが見つかりません');
 });

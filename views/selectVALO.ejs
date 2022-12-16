@@ -17,15 +17,20 @@
             <td><%= row.search %></td>
             <td><%= row.control %></td>
             <td>
-                <input type="checkbox" name="<%= row.id %>">
+                <input type="checkbox" name="<%= row.id %>" id="pick">
                 <label for="pick">pick</label>
             </td>
         </tr>
       <% } %>
-      <input type="submit" value="決定">
+      <td>
+        <input type="submit" value="決定">
+      </td>
+    </form>
+    <form action="/002">
+      <td>
+        <a href="/views/pick.ejs">編成確認</a>
+      </td>
     </form>
   </table>
-  <br>
-  <a href="/public/weapon.html"> </a><br>
 </body>
 </html>
