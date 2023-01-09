@@ -5,10 +5,7 @@ let schema = `
 create table character(
   id integer primary key,
   name text not null,
-  offense number not null,
-  defense number not null,
-  search number not null,
-  control number not null
+  parameter number not null
 );
 `
 

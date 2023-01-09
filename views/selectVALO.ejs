@@ -1,4 +1,4 @@
-<!Doctype html>
+ <!Doctype html>
 <html>
 <head>
   <meta charset="utf-8">
@@ -7,7 +7,6 @@
 <body>
   <h2>VALORANTエージェント一覧</h2>
   <table>
-    <form action="/001">
       <% for( let row of data ) { %>
         <tr>
             <td><%= row.id %></td>
@@ -16,21 +15,16 @@
             <td><%= row.defense %></td>
             <td><%= row.search %></td>
             <td><%= row.control %></td>
+            <form action="/001">
             <td>
-                <input type="checkbox" name="<%= row.id %>" id="pick">
-                <label for="pick">pick</label>
+              <input type="submit" name="<%= row.id %>" value="決定">
             </td>
+            </form>
         </tr>
       <% } %>
       <td>
-        <input type="submit" value="決定">
-      </td>
-    </form>
-    <form action="/002">
-      <td>
         <a href="/views/pick.ejs">編成確認</a>
       </td>
-    </form>
   </table>
 </body>
 </html>

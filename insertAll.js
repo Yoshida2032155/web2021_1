@@ -2,26 +2,26 @@ const sqlite3 = require('sqlite3').verbose();
 const db = new sqlite3.Database('test2.db');
 
 let sqls = [
-  `insert into character ("name","offense","defense","search","control") values ("ジェット","50","40","5","15");`,
-  `insert into character ("name","offense","defense","search","control") values ("フェニックス","35","15","10","20");`,
-  `insert into character ("name","offense","defense","search","control") values ("レイナ","45","5","5","5");`,
-  `insert into character ("name","offense","defense","search","control") values ("ネオン","40","30","5","25");`,
-  `insert into character ("name","offense","defense","search","control") values ("レイズ","45","30","30","5");`,
-  `insert into character ("name","offense","defense","search","control") values ("ヨル","30","5","10","5");`,
-  `insert into character ("name","offense","defense","search","control") values ("ブリムストーン","15","25","5","40");`,
-  `insert into character ("name","offense","defense","search","control") values ("オーメン","20","20","5","50");`,
-  `insert into character ("name","offense","defense","search","control") values ("アストラ","10","30","5","50");`,
-  `insert into character ("name","offense","defense","search","control") values ("ヴァイパー","5","30","5","35");`,
-  `insert into character ("name","offense","defense","search","control") values ("ハーバー","30","15","5","35");`,
-  `insert into character ("name","offense","defense","search","control") values ("ソーヴァ","15","10","50","5");`,
-  `insert into character ("name","offense","defense","search","control") values ("スカイ","25","5","40","5");`,
-  `insert into character ("name","offense","defense","search","control") values ("フェード","10","20","45","5");`,
-  `insert into character ("name","offense","defense","search","control") values ("KAY/O","25","25","30","5");`,
-  `insert into character ("name","offense","defense","search","control") values ("ブリーチ","30","25","10","5");`,
-  `insert into character ("name","offense","defense","search","control") values ("サイファー","10","25","25","30");`,
-  `insert into character ("name","offense","defense","search","control") values ("キルジョイ","10","40","20","5");`,
-  `insert into character ("name","offense","defense","search","control") values ("セージ","20","30","5","10");`,
-  `insert into character ("name","offense","defense","search","control") values ("チェンバー","40","35","5","5");`
+  `insert into character ("name","parameter") values ("ジェット","120");`,
+  `insert into character ("name","parameter") values ("レイナ","60");`,
+  `insert into character ("name","parameter") values ("フェニックス","80");`,
+  `insert into character ("name","parameter") values ("ネオン","60");`,
+  `insert into character ("name","parameter") values ("レイズ","100");`,
+  `insert into character ("name","parameter") values ("ヨル","40");`,
+  `insert into character ("name","parameter") values ("ブリムストーン","60");`,
+  `insert into character ("name","parameter") values ("オーメン","100");`,
+  `insert into character ("name","parameter") values ("アストラ","80");`,
+  `insert into character ("name","parameter") values ("ヴァイパー","80");`,
+  `insert into character ("name","parameter") values ("ハーバー","60");`,
+  `insert into character ("name","parameter") values ("ソーヴァ","100");`,
+  `insert into character ("name","parameter") values ("スカイ","60");`,
+  `insert into character ("name","parameter") values ("フェード","100");`,
+  `insert into character ("name","parameter") values ("KAY/O","120");`,
+  `insert into character ("name","parameter") values ("ブリーチ","60");`,
+  `insert into character ("name","parameter") values ("サイファー","80");`,
+  `insert into character ("name","parameter") values ("キルジョイ","120");`,
+  `insert into character ("name","parameter") values ("セージ","60");`,
+  `insert into character ("name","parameter") values ("チェンバー","80");`
 ]
 for( let sql of sqls){
   db.serialize( () => {
