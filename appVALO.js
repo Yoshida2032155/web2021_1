@@ -9,7 +9,7 @@ app.use("/public", express.static(__dirname + "/public"));
 
 app.get("/", (req, res) => {
   const message = " ";
-    let sql = "select id, name, offense, defense, search, control from character;";
+    let sql = "select id, name from character;";
     //console.log(sql);    // ②
     db.serialize( () => {
         db.all(sql, (error, data) => {
@@ -23,7 +23,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/001", (req, res) => {
-    let sql = 'insert into party ("chracter_id") values ("'+ req.query.<%= row.id %> +'");';
+    let sql = 'insert into party (namepick, parameterpick) select name parameter from character where id=' + req.query.ID + ';';
   db.serialize( () => {
         db.all(sql, (error, data) => {
             if( error ) {
@@ -37,7 +37,7 @@ app.get("/001", (req, res) => {
 
 app.get("/002", (req, res) => {
   const message = " ";
-    let sql = "select id, character_id from party;";
+    let sql = "select ID, namepick, parameterpick from party;";
     //console.log(sql);    // ②
     db.serialize( () => {
         db.all(sql, (error, data) => {

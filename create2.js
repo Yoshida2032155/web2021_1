@@ -3,9 +3,9 @@ const db = new sqlite3.Database('test2.db');
 
 let schema = `
 create table party(
-  id integer primary key,
-  name text not null,
-  parameter number not null
+  ID integer primary key,
+  namepick text not null,
+  parameterpick number not null
   
 );
 `

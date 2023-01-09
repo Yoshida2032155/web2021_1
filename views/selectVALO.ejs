@@ -11,20 +11,9 @@
         <tr>
             <td><%= row.id %></td>
             <td><%= row.name %></td>
-            <td><%= row.offense %></td>
-            <td><%= row.defense %></td>
-            <td><%= row.search %></td>
-            <td><%= row.control %></td>
-            <form action="/001">
-            <td>
-              <input type="submit" name="<%= row.id %>" value="決定">
-            </td>
-            </form>
         </tr>
       <% } %>
-      <td>
-        <a href="/views/pick.ejs">編成確認</a>
-      </td>
+      <a href="/public/pick.html">エージェントピック</a>
   </table>
 </body>
 </html>
