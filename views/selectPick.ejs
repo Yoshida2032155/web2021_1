@@ -6,14 +6,25 @@
 </head>
 <body>
   <h2>エージェント編成</h2>
+  <h4>能力値の合計が以下のようになるよう考えてみよう！</h4>
+  <h4>攻撃力＝100、守備力＝120、索敵力＝90、支配力＝60</h4>
   <table>
       <% for( let row of data ) { %>
         <tr>
-            <td><%= row.ID %></td>
-            <td><%= row.namepick %></td>
+            <td><%= row.name %></td>
+          <th>攻撃力</th>
+            <td><%= row.offense %></td>
+          <th>守備力</th>
+            <td><%= row.defense %></td>
+          <th>索敵力</th>
+            <td><%= row.search %></td>
+          <th>支配力</th>
+            <td><%= row.control %></td>
         </tr>
       <% } %>
-      <a href="/">エージェント一覧</a>
+      <td>
+      <a href="/">top</a>
+      </td>
   </table>
 </body>
 </html>
