@@ -45,7 +45,7 @@ app.get("/002", (req, res) => {
                 res.render('home', {mes:"エラーです"});
             }
             //console.log(data);    // ③
-            res.render('pick', {data:data});
+            res.render('selectPick', {data:data});
         })
     })
 });

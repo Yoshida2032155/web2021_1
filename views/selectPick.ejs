@@ -5,15 +5,15 @@
   <title>Show message</title>
 </head>
 <body>
-  <h2>VALORANTエージェント一覧</h2>
+  <h2>エージェント編成</h2>
   <table>
       <% for( let row of data ) { %>
         <tr>
-            <td><%= row.id %></td>
-            <td><%= row.name %></td>
+            <td><%= row.ID %></td>
+            <td><%= row.namepick %></td>
         </tr>
       <% } %>
-      <a href="/public/pick.html">エージェントピック</a>
+      <a href="/">エージェント一覧</a>
   </table>
 </body>
 </html>
