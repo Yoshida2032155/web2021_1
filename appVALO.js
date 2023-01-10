@@ -24,7 +24,6 @@ app.get("/", (req, res) => {
 
 app.get("/001", (req, res) => {
     let sql = 'insert into party (namepick, parameterpick) select name parameter from character where id=' + req.query.ID + ';';
-    let sql = "select ID, namepick, parameterpick from party;";
   db.serialize( () => {
         db.all(sql, (error, data) => {
             if( error ) {
